@@ -5,7 +5,7 @@ function App() {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/students")
+    fetch("https://student-management-system-yjdp.onrender.com/")
       .then((res) => res.json())
       .then((data) => setStudents(data));
   }, []);
@@ -13,7 +13,7 @@ function App() {
   const addStudent = async () => {
     if (!name) return;
 
-    await fetch("http://localhost:5000/students", {
+    await fetch("https://student-management-system-yjdp.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
